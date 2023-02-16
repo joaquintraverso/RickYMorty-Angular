@@ -64,7 +64,7 @@ export class CharactersListComponent {
       .pipe(take(1))
       .subscribe((res: any) => {
         if (res?.results?.length){
-          console.log(res);
+          // console.log(res);
           const {info, results} = res;
           this.characters = [...this.characters, ...results];
           this.info = info;
