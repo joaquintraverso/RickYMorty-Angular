@@ -17,5 +17,8 @@ export class FormSearchComponent {
         queryParams: {q: value}
       });
     }
+    if (value.length == 0) {
+      this.router.navigate(['/characters-list'])
+    }
   }
 }

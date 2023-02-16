@@ -1,32 +1,21 @@
-<div class="row">
+<div class="row" style="width: 100%;">
   <div
     class="col-xs-12 col-sm-6 col-md-4"
     style="display: flex; justify-content: center; align-items: center; padding: 8px;"
     *ngFor="let character of characters"
   >
-    <div
-      class="card"
-      style="width: 18rem; padding: 3px;">
-      <img [src]="character.image" class="card-img-top" [alt]="character.name">
-      <div class="card-body">
-        <h5 class="card-title">{{character.name}}</h5>
-        <p class="card-text">
-          Especie: {{character.species}}
-        </p>
-        <p class="card-text">
-          Genero: {{character.gender}}
-        </p>
-        <a
-          [routerLink]="['/characters-details', character.id]"
-          class="btn btn-primary"
-          style="display: flex; justify-content: center; align-items: center;"
-        >
-          Ver más
-        </a>
-      </div>
+    <div style="width: 70%; height: 90%;">
+      <a [routerLink]="['/characters-details', character.id]" class="card">
+        <div>
+          <img [src]="character.image" [alt]="character.name"
+            style="width: 100%;"
+          />
+        </div>
+        <article>
+          <h1>{{character.name}}</h1>
+          <span>{{character.species}}</span>
+        </article>
+      </a>
     </div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-12" *nfIf="characters <= 0">
-    No results ):
   </div>
 </div>

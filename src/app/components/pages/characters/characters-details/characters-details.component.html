@@ -1,1 +1,20 @@
-<p>characters-details works!</p>
+<div *ngIf="characterId | async as character">
+  <div
+    class="xs-12 sm-6 md-4"
+    style="display: flex; justify-content: center; align-items: center; padding: 8px;"
+  >
+    <div style="width: 100%; height: 100%;">
+      <a class="card">
+        <div>
+          <img [src]="character.image" [alt]="character.name"
+            style="width: 100%;"
+          />
+        </div>
+        <article>
+          <h1>{{character.name}}</h1>
+          <span>{{character.species}}</span>
+        </article>
+      </a>
+    </div>
+  </div>
+</div>

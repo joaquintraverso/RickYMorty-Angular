@@ -6,12 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FormSearchComponent } from './shared/components/form-search/form-search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './shared/components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormSearchComponent
+    FormSearchComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
